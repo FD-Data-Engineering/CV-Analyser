@@ -20,15 +20,21 @@ Next we have to create a service account with some RBAC elevated privileges. We 
 ## Helm Install
 With the ecosystem configured for spark operator, we can proceed to installing Helm. Helm is a package manager used to manage Kubernetes application. In this project, we are using Helm v3.
 Run the below commands to install and configure Helm on your local machine.
-       `` curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 ``
-       `` chmod 700 get_helm.sh ``
-       `` ./get_helm.sh  ``
+```
+       curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+       chmod 700 get_helm.sh
+       ./get_helm.sh
+```
 
 After installing Helm, run the following commands to add the helm incumbator repository.
-       `` helm repo add incubator https://charts.helm.sh/incubator ``
-       `` helm repo add spark-operator https://googlecloudplatform.github.io/spark-on-k8s-operator ``
+```    helm repo add incubator https://charts.helm.sh/incubator
+       helm repo add spark-operator https://googlecloudplatform.github.io/spark-on-k8s-operator
+```
 
 Next, we run helm install with some helm config to deploy cv-analyser. The command to run is:
-`` helm install cv-analyser spark-operator/spark-operator --namespace spark-operator  --set sparkJobNamespace=spark-operator --set webhook.enable=true ``
-The above command will take a while to setup. When it is completed, run `` kubectl get all -n spark-operator `` to confirm the cv-analyser deployment. 
+
+``` helm install cv-analyser spark-operator/spark-operator --namespace spark-operator  --set sparkJobNamespace=spark-operator --set webhook.enable=true 
+```
+
+The above command will take a while to setup. When it is completed, run ``` kubectl get all -n spark-operator ``` to confirm the cv-analyser deployment. 
 
