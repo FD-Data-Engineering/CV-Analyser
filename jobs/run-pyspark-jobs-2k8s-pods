@@ -1,2 +1,0 @@
-MY_JOB=$1
-kubectl apply -f ${MY_JOB}.yaml
