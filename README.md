@@ -32,9 +32,8 @@ After installing Helm, run the following commands to add the helm incumbator rep
 ```
 
 Next, we run helm install with some helm config to deploy cv-analyser. The command to run is:
-
-``` helm install cv-analyser spark-operator/spark-operator --namespace spark-operator  --set sparkJobNamespace=spark-operator --set webhook.enable=true 
+``` 
+       helm install cv-analyser spark-operator/spark-operator --namespace spark-operator  --set sparkJobNamespace=spark-operator --set webhook.enable=true 
 ```
-
 The above command will take a while to setup. When it is completed, run ``` kubectl get all -n spark-operator ``` to confirm the cv-analyser deployment. 
 
