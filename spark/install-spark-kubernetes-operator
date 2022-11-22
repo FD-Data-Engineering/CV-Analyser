@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#
+# Step_1 : Install spark-operator in kubernetes
+# Step_2 : For spark-operator enable webhook
+#
+helm repo add incubator http://storage.googleapis.com/kubernetes-charts-incubator 
+#
+# first run create namespace
+kubectl create namespace spark-operator
+helm install incubator/sparkoperator --generate-name --namespace  spark-operator --set enableWebhook=true  
+#
