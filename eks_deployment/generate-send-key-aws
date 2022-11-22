@@ -1,0 +1,11 @@
+#!/bin/bash
+##
+set -e
+
+ssh-keygen -t rsa -C "gateway-aws-eks-eu1" -f ~/.ssh/gateway-aws-eks-eu1
+
+aws ec2 import-key-pair \
+--key-name "gateway-aws-eks-eu1" \
+--public-key-material file://~/.ssh/gateway-aws-eks-eu1.pub
+--region eu-west-1 
+#
