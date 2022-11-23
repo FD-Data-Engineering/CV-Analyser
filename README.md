@@ -57,6 +57,9 @@ And if you check the logs by running ```kubectl logs pyspark-pi-driver -n spark-
 ## Deploying CV Analyser Spark Jobs on Kubernetes
 
 The CV Analyser Spark jobs can be found in ``` /jobs/job-dir ```. In that directory are two Python files: ``` load-data-cv-to-delta.py ``` and ``` dataminer-categorized-delta-analytics.py ```. The Kubernetes definitions can be found in ```/jobs ``` directory. You'll need to execute the following files:
-``` load-data-cv-to-delta.yaml ``` and ``` dataminer-categorized-delta-analytics.yaml ```. 
+``` load-data-cv-to-delta.yaml ``` and ``` dataminer-categorized-delta-analytics.yaml ```. First and formost, run ``` load-data-cv-to-delta.yaml ``` to load the CV to create a ``.json`` file, which can be found in ``` /jobs/job-dir/data/raw_json ```.  After, you can run ``` dataminer-categorized-delta-analytics.yaml ``` job, to analyse and categorise the ``.json`` file.
+
+## Prerequistes
+* Ensure you have a sample CV in ``.pdf`` format in ```/jobs/job-dir/data/raw_pdf/dt=yyyy-mm-dd``` (dt = current date).
 
 
