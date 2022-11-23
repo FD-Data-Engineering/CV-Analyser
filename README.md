@@ -3,18 +3,19 @@
 ## Local Developement Pre-Requisites
 The below steps should help a user to get started:
 
-* Docker Desktop
+* Docker Desktop:
 Ensure Docker Desktop is installed on your local machine. This can be downloaded [here](https://docs.docker.com/desktop/install/windows-install/)
-* Enabling Docker support in WSL 2 distros
+* Enabling Docker support in WSL 2 distros:
 Consigure WSL 2 as a backend for Kubernetes in Docker desktop using this [link](https://learn.microsoft.com/en-us/windows/wsl/install)
 * Kubernetes
 After installing Docker desktop, enable Kubernetes to run on your local machine by following these [steps](https://docs.docker.com/desktop/windows/wsl/)
 The above steps will install `` kubectl ``. You can test this by running ``  kubectl get nodes ``. This command will display the nodes you have on your local machine.
-* Installing Missing Packages
+* Installing Missing Packages:
 If your WSL OS is UBuntu, run ``` .\install_package_dependencies.sh ``` to install all the dependencies needed to run the jobs. Otherwise, similar packages need to be installed based on other Linux flavours.
-* Java
+* Java:
 Ensure Java 8 is installed on your local development machine. If not, the file can be downloaded from [here](https://fdplc.sharepoint.com/:u:/r/sites/CMCDataServices/Shared%20Documents/Data%20Engineering%20and%20Data%20Science/Packages/jdk-8u221-linux-x64.tar.gz?csf=1&web=1). You can install the file by executing
-```    ./install-java.sh -f jdk-8u221-linux-x64.tar.gz
+```   
+        ./install-java.sh -f jdk-8u221-linux-x64.tar.gz
        export JAVA_HOME=/usr
 ```
 
