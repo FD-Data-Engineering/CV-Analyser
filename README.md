@@ -1,6 +1,6 @@
 # Spark on Kubernetes using Spark-Operator
 
-## Local Developement Pre-Requisite
+## Local Developement Pre-Requisites
 The below steps should help a user to get started:
 
 * Docker Desktop
@@ -36,6 +36,7 @@ Next, we run helm install with some helm config to deploy cv-analyser. The comma
        helm install cv-analyser spark-operator/spark-operator --namespace spark-operator  --set sparkJobNamespace=spark-operator --set webhook.enable=true 
 ```
 The above command will take a while to setup. When it is completed, run ``` kubectl get all -n spark-operator ``` to confirm the cv-analyser deployment. 
+You can check mutating webhook configuration by running  ``` kubectl get mutatingwebhookconfiguration ``` . This should show you a similar result as above.
 
 ## Deploying Spark App on Kubernetes
 With the infrastructure now setup, we can now deploy the spark jobs on Kubernetes.
