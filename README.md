@@ -15,7 +15,7 @@ If your WSL OS is UBuntu, run ``` .\install_package_dependencies.sh ``` to insta
 * Java:
 Ensure Java 8 is installed on your local development machine. If not, the file can be downloaded from [here](https://fdplc.sharepoint.com/:u:/r/sites/CMCDataServices/Shared%20Documents/Data%20Engineering%20and%20Data%20Science/Packages/jdk-8u221-linux-x64.tar.gz?csf=1&web=1). You can install the file by executing
 ```   
-        ./install-java.sh -f jdk-8u221-linux-x64.tar.gz
+       ./install-java.sh -f jdk-8u221-linux-x64.tar.gz
        export JAVA_HOME=/usr
 ```
 
