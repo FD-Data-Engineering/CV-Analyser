@@ -10,6 +10,13 @@ Consigure WSL 2 as a backend for Kubernetes in Docker desktop using this [link](
 * Kubernetes
 After installing Docker desktop, enable Kubernetes to run on your local machine by following these [steps](https://docs.docker.com/desktop/windows/wsl/)
 The above steps will install `` kubectl ``. You can test this by running ``  kubectl get nodes ``. This command will display the nodes you have on your local machine.
+* Installing Missing Packages
+If your WSL OS is UBuntu, run ``` .\install_package_dependencies.sh ``` to install all the dependencies needed to run the jobs. Otherwise, similar packages need to be installed based on other Linux flavours.
+* Java
+Ensure Java 8 is installed on your local development machine. If not, the file can be downloaded from [here](https://fdplc.sharepoint.com/:u:/r/sites/CMCDataServices/Shared%20Documents/Data%20Engineering%20and%20Data%20Science/Packages/jdk-8u221-linux-x64.tar.gz?csf=1&web=1). You can install the file by executing
+```    ./install-java.sh -f jdk-8u221-linux-x64.tar.gz
+       export JAVA_HOME=/usr
+```
 
 ## Spark Operator
 First we need to create the spark-operator namespace by running `` kubectl create namespace spark-operator ``.
@@ -56,10 +63,15 @@ And if you check the logs by running ```kubectl logs pyspark-pi-driver -n spark-
 
 ## Deploying CV Analyser Spark Jobs on Kubernetes
 
-The CV Analyser Spark jobs can be found in ``` /jobs/job-dir ```. In that directory are two Python files: ``` load-data-cv-to-delta.py ``` and ``` dataminer-categorized-delta-analytics.py ```. The Kubernetes definitions can be found in ```/jobs ``` directory. You'll need to execute the following files:
-``` load-data-cv-to-delta.yaml ``` and ``` dataminer-categorized-delta-analytics.yaml ```. First and formost, run ``` load-data-cv-to-delta.yaml ``` to load the CV to create a ``.json`` file, which can be found in ``` /jobs/job-dir/data/raw_json ```.  After, you can run ``` dataminer-categorized-delta-analytics.yaml ``` job, to analyse and categorise the ``.json`` file.
+The CV Analyser Spark jobs can be found in ``` /jobs/job-dir ```. In that directory are two Python files: ``` load-data-cv-to-delta.py ``` and ``` dataminer-categorized-delta-analytics.py ```. The Kubernetes definitions can be found in ```/jobs ``` directory.
+First and formost, run ``` load-data-cv-to-delta.yaml ``` to load the CV to create a ``.json`` file, which can be found in ``` /jobs/job-dir/data/raw_json ```.  
+After, you can run ``` dataminer-categorized-delta-analytics.yaml ``` job, to analyse and categorise the ``.json`` file.
 
 ## Prerequistes
 * Ensure you have a sample CV in ``.pdf`` format in ```/jobs/job-dir/data/raw_pdf/dt=yyyy-mm-dd``` (dt = current date).
 
+## Run CV Analyser Spark App
+Run the ``load-data-cv-to-delta`` job by executing ``` kubectl apply -f ./jobs/load-data-cv-to-delta.yaml ```. This will load the CV as described above. The output of this command will create a directory with curent ``` DATE ``` in ```/jobs/job-dir/data/raw_json/dt=yyyy-mm-dd/extract-yyyy-mm-dd.json```.
+
+Upon a successful run of the above, proceed to executing ``` kubectl apply -f ./jobs/dataminer-categorized-delta-analytics.yaml ```. This commad will analyse and categorise the ``.json`` file and create a ``.parquet.crc`` file, which can be found in ``/jobs/job-dir/data/delta/json-cv-pdf `` and ``/jobs/job-dir/data/delta/cv-files-ngrams ``. 
 
