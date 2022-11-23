@@ -37,3 +37,24 @@ Next, we run helm install with some helm config to deploy cv-analyser. The comma
 ```
 The above command will take a while to setup. When it is completed, run ``` kubectl get all -n spark-operator ``` to confirm the cv-analyser deployment. 
 
+## Deploying Spark App on Kubernetes
+With the infrastructure now setup, we can now deploy the spark jobs on Kubernetes.
+
+## Test - Running a PySpark app
+The examples directory contains Spark Operator job definitions you can use:
+* spark-pi.yaml
+* spark-py-pi.yaml
+You can run these with ```kubectl ``` by executing:
+``` 
+       kubectl apply -f ./examples/spark-pi.yaml 
+       kubectl apply -f ./examples/spark-py-pi.yaml
+```
+Upon completion, you can inspect the pods by running ``` kubectl get pods -n spark-operator ``` to list all pods in spark-operator namespace.
+
+And if you check the logs by running ```kubectl logs pyspark-pi-driver -n spark-operator``` you should find one line in the logs giving an approximate value of ```pi Pi is roughly 3.142020```.
+
+## Deploying CV Analyser Spark Jobs on Kubernetes
+
+The CV Analyser jobs can be found in ``` /jobs/job-dir ```. 
+
+
