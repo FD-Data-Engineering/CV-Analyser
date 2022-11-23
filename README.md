@@ -49,7 +49,7 @@ You can check mutating webhook configuration by running  ``` kubectl get mutatin
 ## Deploying Spark App on Kubernetes
 With the infrastructure now setup, we can now deploy the spark jobs on Kubernetes.
 
-## Test - Running a PySpark app
+## Test - Running a PySpark job
 The examples directory contains Spark Operator job definitions you can use:
 * spark-pi.yaml
 * spark-py-pi.yaml
@@ -71,7 +71,7 @@ After, you can run ``` dataminer-categorized-delta-analytics.yaml ``` job, to an
 ## Prerequistes
 * Ensure you have a sample CV in ``.pdf`` format in ```/jobs/job-dir/data/raw_pdf/dt=yyyy-mm-dd``` (dt = current date).
 
-## Run CV Analyser Spark App
+## Run CV Analyser Spark Jobs
 Run the ``load-data-cv-to-delta`` job by executing ``` kubectl apply -f ./jobs/load-data-cv-to-delta.yaml ```. This will load the CV as described above. The output of this command will create a directory with curent ``` DATE ``` in ```/jobs/job-dir/data/raw_json/dt=yyyy-mm-dd/extract-yyyy-mm-dd.json```.
 
 Upon a successful run of the above, proceed to executing ``` kubectl apply -f ./jobs/dataminer-categorized-delta-analytics.yaml ```. This commad will analyse and categorise the ``.json`` file and create a ``.parquet.crc`` file, which can be found in ``/jobs/job-dir/data/delta/json-cv-pdf `` and ``/jobs/job-dir/data/delta/cv-files-ngrams ``. 
