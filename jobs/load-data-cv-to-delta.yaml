@@ -42,7 +42,7 @@ spec:
         type: Directory
     - name: spark-application-file
       hostPath:
-        path: /home/pkwame/Git/spark-on-kubernetes/jobs/job-dir/load-data-cv-to-delta2.py # $PWD/load-data-cv-to-delta.py
+        path: /home/pkwame/Git/spark-on-kubernetes/jobs/job-dir/load-data-cv-to-delta.py # $PWD/load-data-cv-to-delta.py
         type: File
 #
 #
