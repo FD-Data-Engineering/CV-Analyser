@@ -18,6 +18,7 @@ Ensure Java 8 is installed on your local development machine. If not, the file c
        ./install-java.sh -f jdk-8u221-linux-x64.tar.gz
        export JAVA_HOME=/usr
 ```
+* Python 3: Your local machine needs Python 3 to run the Spark jobs. Python 3 can be installed by following [this](https://docs.python-guide.org/starting/install3/linux/)
 
 ## Spark Operator
 First we need to create the spark-operator namespace by running `` kubectl create namespace spark-operator ``.
