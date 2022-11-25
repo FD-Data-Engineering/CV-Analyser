@@ -12,11 +12,10 @@
 from datetime import datetime
 
 datepath=datetime.today().strftime('%Y-%m-%d')
-print(datepath)
-pdf_daily_path ="/opt/spark/examples/"+"data/raw_pdf/dt="+datepath+"/" 
+pdf_daily_path ="/c/cv-analyser/CV-Analyser/jobs/job-dir/"+"data/raw_pdf/dt="+datepath+"/" 
 #
-json_daily_path="/opt/spark/examples/"+"data/raw_json/dt="+datepath+"/"
-delta_json_structure="/opt/spark/examples/"+"data/delta/json-cv-pdf"
+json_daily_path="/c/cv-analyser/CV-Analyser/jobs/job-dir/"+"data/raw_json/dt="+datepath+"/"
+delta_json_structure="/c/cv-analyser/CV-Analyser/jobs/job-dir/"+"data/delta/json-cv-pdf"
 
 print(pdf_daily_path)
 print(json_daily_path)
@@ -103,8 +102,8 @@ print("Data Load Done!")
 ##############################
 ###
 ### Input delta in folder :  /data 
-my_input_delta_table="/opt/spark/examples/"+"data/delta/json-cv-pdf"
-delta_ngram_structure="/opt/spark/examples/"+"data/delta/cv-files-ngrams"
+my_input_delta_table="/c/cv-analyser/CV-Analyser/jobs/job-dir/"+"data/delta/json-cv-pdf"
+delta_ngram_structure="/c/cv-analyser/CV-Analyser/jobs/job-dir/"+"data/delta/cv-files-ngrams"
 ###
 ######
 ##############################Execution##########################
@@ -193,9 +192,9 @@ print("Calculate top 10 most frequent 1,2,3,4,5,6 ngrams  - Finished!")
 #####
 ####################################################
 #
-skills_bulk_path="/opt/spark/examples/"+"data/raw_role_skills/*.csv"
+skills_bulk_path="/c/cv-analyser/CV-Analyser/jobs/job-dir/"+"data/raw_role_skills/*.csv"
 #
-delta_skills_structure="/opt/spark/examples/"+"data/delta/role_skills"
+delta_skills_structure="/c/cv-analyser/CV-Analyser/jobs/job-dir/"+"data/delta/role_skills"
 #
 ##############################Execution##########################
 #import findspark
