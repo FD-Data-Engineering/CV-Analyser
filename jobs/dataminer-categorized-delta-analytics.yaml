@@ -32,16 +32,16 @@ spec:
   volumeMounts:
     - mountPath: //job-dir
       name: local-jobs
-    - mountPath: /home/pkwame/Git/spark-on-kubernetes/jobs/job-dir/dataminer-categorized-delta-analytics.py
+    - mountPath: //job-dir/dataminer-categorized-delta-analytics.py
       name: spark-application-file
   volumes:
     - name: local-jobs
       hostPath:
-        path: /home/pkwame/Git/spark-on-kubernetes/jobs/job-dir # $PWD/jobs/job-dir
+        path: /c/cv-analyser/CV-Analyser/jobs/job-dir # $PWD/jobs/job-dir
         type: DirectoryOrCreate
     - name: spark-application-file
       hostPath:
-        path: /home/pkwame/Git/spark-on-kubernetes/jobs/job-dir/dataminer-categorized-delta-analytics.py  # $PWD/jobs/job-dir/dataminer-categorized-delta-analytics.py
+        path: /c/cv-analyser/CV-Analyser/jobs/job-dir/dataminer-categorized-delta-analytics.py  # $PWD/jobs/job-dir/dataminer-categorized-delta-analytics.py
         type: FileOrCreate
 #
 #
@@ -71,7 +71,7 @@ spec:
       - name: local-jobs
         mountPath: //job-dir
       - name: spark-application-file
-        mountPath: /home/pkwame/Git/spark-on-kubernetes/jobs/job-dir/dataminer-categorized-delta-analytics.py
+        mountPath: //job-dir/dataminer-categorized-delta-analytics.py
 #
   executor:
     cores: 1
@@ -84,6 +84,6 @@ spec:
       - name: local-jobs
         mountPath: //job-dir
       - name: spark-application-file
-        mountPath: /home/pkwame/Git/spark-on-kubernetes/jobs/job-dir/dataminer-categorized-delta-analytics.py
+        mountPath: //job-dir/dataminer-categorized-delta-analytics.py
 #
 #
