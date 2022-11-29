@@ -41,11 +41,11 @@ spec:
 #        claimName: pv-claim
     - name: local-job     
       hostPath:
-        path: /c/cv-analyser/CV-Analyser/jobs/job-dir # $PWD/jobs/job-dir
+        path: /run/desktop/mnt/host/c/cv-analyser/CV-Analyser/jobs/job-dir # $PWD/jobs/job-dir
         type: DirectoryOrCreate
     - name: spark-application-file
       hostPath:
-        path: /c/cv-analyser/CV-Analyser/jobs/job-dir/load-data-cv-to-delta.py # $PWD/load-data-cv-to-delta.py
+        path: /run/desktop/mnt/host/c/cv-analyser/CV-Analyser/jobs/job-dir/load-data-cv-to-delta.py # $PWD/load-data-cv-to-delta.py
         type: FileOrCreate
   #
   #
