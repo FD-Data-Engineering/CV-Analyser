@@ -30,28 +30,13 @@ spec:
 #
 #
 # missing Volume
-  volumeMounts:
-    - mountPath: //job-dir
-      name: local-job
-    - mountPath: //job-dir/load-data-cv-to-delta.py
-      name: spark-application-file
-  volumes:
-    - name: local-job
-      hostPath:
-        path: /home/pkwame/Git/spark-on-kubernetes/jobs/job-dir # $PWD/jobs/job-dir
-        type: Directory
-    - name: spark-application-file
-      hostPath:
-        path: /home/pkwame/Git/spark-on-kubernetes/jobs/job-dir/load-data-cv-to-delta.py # $PWD/load-data-cv-to-delta.py
-        type: File
+  
 #
 #
-  mainApplicationFile: local:///job-dir/load-data-cv-to-delta.py
+  mainApplicationFile: local:///home/smestry/CV-Analyzer/job-dir/load-data-cv-to-delta.py
+  #mainClass: "org.apache.spark.examples.SparkPi"
 #
-  arguments:
-     - " "
-  packages:
-     - "io.delta:delta-core_2.11:0.6.1"
+  
 #
   sparkVersion: "2.4.5"
   restartPolicy:
@@ -60,31 +45,32 @@ spec:
     onFailureRetryInterval: 10
     onSubmissionFailureRetries: 5
     onSubmissionFailureRetryInterval: 20
+  volumes:
+    - name: "test-volume"
+      hostPath:
+        path: "/home/smestry"
+        type: DirectoryOrCreate
   driver:
     cores: 1
     coreLimit: "1200m"
     memory: "512m"
+    volumeMounts:
+      - name: "test-volume"
+        mountPath: "/home/smestry/CV-Analyzer/job-dir/"
     labels:
       version: 2.4.5
     serviceAccount: spark
-#
-    volumeMounts:
-      - name: local-job
-        mountPath: //job-dir
-      - name: spark-application-file
-        mountPath: //job-dir/load-data-cv-to-delta.py
 #
   executor:
     cores: 1
     instances: 1
     memory: "512m"
+    volumeMounts:
+      - name: "test-volume"
+        mountPath: "/home/smestry/CV-Analyzer/job-dir/"
     labels:
       version: 2.4.5
+#      
 #
-    volumeMounts:
-      - name: local-job
-        mountPath: //job-dir
-      - name: spark-application-file 
-        mountPath: //job-dir/load-data-cv-to-delta.py
-#
+
 #
