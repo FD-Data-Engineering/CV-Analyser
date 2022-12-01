@@ -30,28 +30,25 @@ spec:
 #
 #
 # missing Volume
-  volumeMounts:
-    - mountPath: //job-dir
-      name: local-job
-    - mountPath: //job-dir/load-data-cv-to-delta.py
-      name: spark-application-file
+ 
   volumes:
-    - name: local-job
+#    - name: pv-storage
+#      persistentVolumeClaim:
+#        claimName: pv-claim
+    - name: local-job     
       hostPath:
-        path: /home/pkwame/Git/spark-on-kubernetes/jobs/job-dir # $PWD/jobs/job-dir
-        type: Directory
+        path: /var/lib/docker/volumes/loadCV/_data # $PWD/jobs/job-dir
     - name: spark-application-file
       hostPath:
-        path: /home/pkwame/Git/spark-on-kubernetes/jobs/job-dir/load-data-cv-to-delta.py # $PWD/load-data-cv-to-delta.py
+        path: /var/lib/docker/volumes/loadCV/_data/load-data-cv-to-delta.py # $PWD/jobs/job-dir
         type: File
+    
+    
 #
 #
-  mainApplicationFile: local:///job-dir/load-data-cv-to-delta.py
+  mainApplicationFile: local:///opt/spark/examples/load-data-cv-to-delta.py
 #
-  arguments:
-     - " "
-  packages:
-     - "io.delta:delta-core_2.11:0.6.1"
+  
 #
   sparkVersion: "2.4.5"
   restartPolicy:
@@ -70,9 +67,9 @@ spec:
 #
     volumeMounts:
       - name: local-job
-        mountPath: //job-dir
-      - name: spark-application-file
-        mountPath: //job-dir/load-data-cv-to-delta.py
+        mountPath: //opt/spark/examples
+        readOnly: false
+      
 #
   executor:
     cores: 1
@@ -83,8 +80,8 @@ spec:
 #
     volumeMounts:
       - name: local-job
-        mountPath: //job-dir
-      - name: spark-application-file 
-        mountPath: //job-dir/load-data-cv-to-delta.py
+        mountPath: //opt/spark/examples
+        readOnly: false
+      
 #
 #

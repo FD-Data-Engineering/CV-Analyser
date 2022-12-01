@@ -26,9 +26,9 @@ spec:
   pythonVersion: "3"
   mode: cluster
   image: "docker.io/jpacerqueira83/pyspark-k8s:2.4.5"
-  imagePullPolicy: Always
+  imagePullPolicy: Never
   mainApplicationFile: local:///opt/spark/examples/src/main/python/pi.py
-  mainClass: "org.apache.spark.examples.SparkPi"
+  #mainClass: "org.apache.spark.examples.SparkPi"
   sparkVersion: "2.4.5"
   restartPolicy:
     type: OnFailure

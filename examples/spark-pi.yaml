@@ -31,7 +31,7 @@ spec:
   volumes:
     - name: "test-volume"
       hostPath:
-        path: "/home/pkwame/work"
+        path: "/home/smestry"
         type: DirectoryOrCreate
   driver:
     cores: 1
@@ -42,7 +42,7 @@ spec:
     serviceAccount: spark
     volumeMounts:
       - name: "test-volume"
-        mountPath: "/home/pkwame/work"
+        mountPath: "/home/smestry"
   executor:
     cores: 1
     instances: 1
@@ -51,5 +51,5 @@ spec:
       version: 2.4.5
     volumeMounts:
       - name: "test-volume"
-        mountPath: "/home/pkwame/work"
+        mountPath: "/home/smestry"
 #
