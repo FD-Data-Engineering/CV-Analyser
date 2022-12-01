@@ -1,0 +1,834 @@
+skill,role,level,skill_type
+python,data engineer,2,T
+python,data engineer,3,T
+python,data engineer,4,T
+python,data engineer,5,T
+scala,data engineer,3,T
+scala,data engineer,4,T
+scala,data engineer,5,T
+java,data engineer,2,T
+java,data engineer,3,T
+java,data engineer,4,T
+java,data engineer,5,T
+closure,data engineer,3,T
+closure,data engineer,4,T
+closure,data engineer,5,T
+go,data engineer,3,T
+go,data engineer,4,T
+go,data engineer,5,T
+bigquery,data engineer,3,T
+bigquery,data engineer,4,T
+bigquery,data engineer,5,T
+big query,data engineer,3,T
+big query,data engineer,4,T
+big query,data engineer,5,T
+gcp,data engineer,3,R
+gcp,data engineer,4,R
+gcp,data engineer,5,R
+pub/sub,data engineer,3,T
+pub/sub,data engineer,4,T
+pub/sub,data engineer,5,T
+pubsub,data engineer,3,T
+pubsub,data engineer,4,T
+pubsub,data engineer,5,T
+pub-sub,data engineer,3,T
+pub-sub,data engineer,4,T
+pub-sub,data engineer,5,T
+pub sub,data engineer,3,T
+pub sub,data engineer,4,T
+pub sub,data engineer,5,T
+dataflow,data engineer,3,T
+dataflow,data engineer,4,T
+dataflow,data engineer,5,T
+beam,data engineer,3,T
+beam,data engineer,4,T
+beam,data engineer,5,T
+apache beam,data engineer,3,T
+apache beam,data engineer,4,T
+apache beam,data engineer,5,T
+dataproc,data engineer,3,T
+dataproc,data engineer,4,T
+dataproc,data engineer,5,T
+dataprep,data engineer,3,T
+dataprep,data engineer,4,T
+dataprep,data engineer,5,T
+cloud functions,data engineer,3,T
+cloud functions,data engineer,4,T
+cloud functions,data engineer,5,T
+cloud spanner,data engineer,3,T
+cloud spanner,data engineer,4,T
+cloud spanner,data engineer,5,T
+cloud sql,data engineer,3,T
+cloud sql,data engineer,4,T
+cloud sql,data engineer,5,T
+google cloud platform,data engineer,3,R
+google cloud platform,data engineer,4,R
+google cloud platform,data engineer,5,R
+azure,data engineer,3,R
+azure,data engineer,4,R
+azure,data engineer,5,R
+microsoft azure,data engineer,3,R
+microsoft azure,data engineer,4,R
+microsoft azure,data engineer,5,R
+sql server,data engineer,3,T
+sql server,data engineer,4,T
+sql server,data engineer,5,T
+sqlserver,data engineer,3,T
+sqlserver,data engineer,4,T
+sqlserver,data engineer,5,T
+oracle,data engineer,3,T
+oracle,data engineer,4,T
+oracle,data engineer,5,T
+pl/sql,data engineer,3,T
+pl/sql,data engineer,4,T
+pl/sql,data engineer,5,T
+postgres,data engineer,3,T
+postgres,data engineer,4,T
+postgres,data engineer,5,T
+postgresql,data engineer,3,T
+postgresql,data engineer,4,T
+postgresql,data engineer,5,T
+mysql,data engineer,3,T
+mysql,data engineer,4,T
+mysql,data engineer,5,T
+redshift,data engineer,3,T
+redshift,data engineer,4,T
+redshift,data engineer,5,T
+aws,data engineer,3,R
+aws,data engineer,4,R
+aws,data engineer,5,R
+aws lambda,data engineer,3,T
+aws lambda,data engineer,4,T
+aws lambda,data engineer,5,T
+lambda functions,data engineer,3,T
+lambda functions,data engineer,4,T
+lambda functions,data engineer,5,T
+aws stepfunctions,data engineer,3,T
+aws stepfunctions,data engineer,4,T
+aws stepfunctions,data engineer,5,T
+stepfunctions,data engineer,3,T
+stepfunctions,data engineer,4,T
+stepfunctions,data engineer,5,T
+aws pipelines,data engineer,3,T
+aws pipelines,data engineer,4,T
+aws pipelines,data engineer,5,T
+aws glue,data engineer,3,T
+aws glue,data engineer,4,T
+aws glue,data engineer,5,T
+aws aurora,data engineer,3,T
+aws aurora,data engineer,4,T
+aws aurora,data engineer,5,T
+aurora,data engineer,3,T
+aurora,data engineer,4,T
+aurora,data engineer,5,T
+serverless aurora,data engineer,3,T
+serverless aurora,data engineer,4,T
+serverless aurora,data engineer,5,T
+glue,data engineer,3,T
+glue,data engineer,4,T
+glue,data engineer,5,T
+athena,data engineer,3,T
+athena,data engineer,4,T
+athena,data engineer,5,T
+graph,data engineer,3,T
+graph,data engineer,4,T
+graph,data engineer,5,T
+neoj4,data engineer,3,T
+neoj4,data engineer,4,T
+neoj4,data engineer,5,T
+tigergraph,data engineer,3,T
+tigergraph,data engineer,4,T
+tigergraph,data engineer,5,T
+gremlin,data engineer,3,T
+gremlin,data engineer,4,T
+gremlin,data engineer,5,T
+gremlin graphql,data engineer,3,T
+gremlin graphql,data engineer,4,T
+gremlin graphql,data engineer,5,T
+confluent kafka,data engineer,3,T
+confluent kafka,data engineer,4,T
+confluent kafka,data engineer,5,T
+kafka,data engineer,3,T
+kafka,data engineer,4,T
+kafka,data engineer,5,T
+kafka developer,data engineer,3,R
+kafka developer,data engineer,4,R
+kafka developer,data engineer,5,R
+develop kafka,data engineer,3,R
+develop kafka,data engineer,4,R
+develop kafka,data engineer,5,R
+developing kafka,data engineer,3,R
+developing kafka,data engineer,4,R
+developing kafka,data engineer,5,R
+developed kafka,data engineer,3,R
+developed kafka,data engineer,4,R
+developed kafka,data engineer,5,R
+kinesis,data engineer,3,T
+kinesis,data engineer,4,T
+kinesis,data engineer,5,T
+teradata,data engineer,3,T
+teradata,data engineer,4,T
+teradata,data engineer,5,T
+big data,data engineer,3,R
+big data,data engineer,4,R
+big data,data engineer,5,R
+bigdata,data engineer,3,R
+bigdata,data engineer,4,R
+bigdata,data engineer,5,R
+hadoop,data engineer,3,T
+hadoop,data engineer,4,T
+hadoop,data engineer,5,T
+hive,data engineer,3,T
+hive,data engineer,4,T
+hive,data engineer,5,T
+spark,data engineer,3,T
+spark,data engineer,4,T
+spark,data engineer,5,T
+solr,data engineer,3,T
+solr,data engineer,4,T
+solr,data engineer,5,T
+elasticsearch,data engineer,3,T
+elasticsearch,data engineer,4,T
+elasticsearch,data engineer,5,T
+databricks,data engineer,3,T
+databricks,data engineer,4,T
+databricks,data engineer,5,T
+azure databricks,data engineer,3,T
+azure databricks,data engineer,4,T
+azure databricks,data engineer,5,T
+azure hdinsight,data engineer,3,T
+azure hdinsight,data engineer,4,T
+azure hdinsight,data engineer,5,T
+azure hdinsights,data engineer,3,T
+azure hdinsights,data engineer,4,T
+azure hdinsights,data engineer,5,T
+hdinsight,data engineer,3,T
+hdinsight,data engineer,4,T
+hdinsight,data engineer,5,T
+hdinsights,data engineer,3,T
+hdinsights,data engineer,4,T
+hdinsights,data engineer,5,T
+nifi,data engineer,3,T
+nifi,data engineer,4,T
+nifi,data engineer,5,T
+cloudera,data engineer,3,T
+cloudera,data engineer,4,T
+cloudera,data engineer,5,T
+cdh,data engineer,3,T
+cdh,data engineer,4,T
+cdh,data engineer,5,T
+cdp,data engineer,3,T
+cdp,data engineer,4,T
+cdp,data engineer,5,T
+hortonworks,data engineer,3,T
+hortonworks,data engineer,4,T
+hortonworks,data engineer,5,T
+hdp,data engineer,3,R
+hdp,data engineer,4,R
+hdp,data engineer,5,R
+implementing data pipelines,data engineer,3,T
+implementing data pipelines,data engineer,4,T
+implementing data pipelines,data engineer,5,T
+data pipelines,data engineer,3,R
+data pipelines,data engineer,4,R
+data pipelines,data engineer,5,R
+etl,data engineer,3,R
+etl,data engineer,4,R
+etl,data engineer,5,R
+elt,data engineer,3,R
+elt,data engineer,4,R
+elt,data engineer,5,R
+splunk,data engineer,3,T
+splunk,data engineer,4,T
+splunk,data engineer,5,T
+stackdriver,data engineer,3,T
+stackdriver,data engineer,4,T
+stackdriver,data engineer,5,T
+logging platforms,data engineer,3,T
+logging platforms,data engineer,4,T
+logging platforms,data engineer,5,T
+logging,data engineer,3,T
+logging,data engineer,4,T
+logging,data engineer,5,T
+devops,devops engineer,3,T
+devops,devops engineer,4,T
+devops,devops engineer,5,T
+experienced devops engineer,devops engineer,4,R
+experienced devops engineer,devops engineer,5,R
+experienced devops engineer,devops engineer,6,R
+senior devops engineer,devops engineer,4,R
+senior devops engineer,devops engineer,5,R
+senior devops engineer,devops engineer,6,R
+automation,devops engineer,3,T
+automation,devops engineer,4,T
+automation,devops engineer,5,T
+automation,devops engineer,6,T
+stackdriver,devops engineer,3,T
+stackdriver,devops engineer,4,T
+stackdriver,devops engineer,5,T
+terraform,devops engineer,3,T
+terraform,devops engineer,4,T
+terraform,devops engineer,5,T
+cloud formation,devops engineer,3,T
+cloud formation,devops engineer,4,T
+cloud formation,devops engineer,5,T
+cloudformation,devops engineer,3,T
+cloudformation,devops engineer,4,T
+cloudformation,devops engineer,5,T
+ansible,devops engineer,3,T
+ansible,devops engineer,4,T
+ansible,devops engineer,5,T
+puppet,devops engineer,3,T
+puppet,devops engineer,4,T
+puppet,devops engineer,5,T
+chef,devops engineer,3,T
+chef,devops engineer,4,T
+chef,devops engineer,5,T
+cloud build,devops engineer,3,T
+cloud build,devops engineer,4,T
+cloud build,devops engineer,5,T
+cloudbuild,devops engineer,3,T
+cloudbuild,devops engineer,4,T
+cloudbuild,devops engineer,5,T
+rust,devops engineer,3,T
+rust,devops engineer,4,T
+rust,devops engineer,5,T
+go,devops engineer,3,T
+go,devops engineer,4,T
+go,devops engineer,5,T
+bash,devops engineer,2,T
+bash,devops engineer,3,T
+bash,devops engineer,4,T
+bash,devops engineer,5,T
+red-hat,devops engineer,3,T
+red-hat,devops engineer,4,T
+red-hat,devops engineer,5,T
+red hat,devops engineer,3,T
+red hat,devops engineer,4,T
+red hat,devops engineer,5,T
+rhel,devops engineer,3,T
+rhel,devops engineer,4,T
+rhel,devops engineer,5,T
+redhat,devops engineer,3,T
+redhat,devops engineer,4,T
+redhat,devops engineer,5,T
+centos,devops engineer,3,T
+centos,devops engineer,4,T
+centos,devops engineer,5,T
+debian,devops engineer,3,T
+debian,devops engineer,4,T
+debian,devops engineer,5,T
+ubuntu,devops engineer,3,T
+ubuntu,devops engineer,4,T
+ubuntu,devops engineer,5,T
+fedora,devops engineer,3,T
+fedora,devops engineer,4,T
+fedora,devops engineer,5,T
+scripting,devops engineer,2,T
+scripting,devops engineer,3,T
+scripting,devops engineer,4,T
+scripting,devops engineer,5,T
+bash scripting,devops engineer,2,T
+bash scripting,devops engineer,3,T
+bash scripting,devops engineer,4,T
+bash scripting,devops engineer,5,T
+unix scripting,devops engineer,2,T
+unix scripting,devops engineer,3,T
+unix scripting,devops engineer,4,T
+unix scripting,devops engineer,5,T
+linux scripting,devops engineer,2,T
+linux scripting,devops engineer,3,T
+linux scripting,devops engineer,4,T
+linux scripting,devops engineer,5,T
+ci/cd,devops engineer,3,T
+ci/cd,devops engineer,4,T
+ci/cd,devops engineer,5,T
+cicd,devops engineer,3,T
+cicd,devops engineer,4,T
+cicd,devops engineer,5,T
+ci cd,devops engineer,3,T
+ci cd,devops engineer,4,T
+ci cd,devops engineer,5,T
+ci-cd,devops engineer,3,T
+ci-cd,devops engineer,4,T
+ci-cd,devops engineer,5,T
+jenkins,devops engineer,3,T
+jenkins,devops engineer,4,T
+jenkins,devops engineer,5,T
+git,devops engineer,3,T
+git,devops engineer,4,T
+git,devops engineer,5,T
+gitlab,devops engineer,3,T
+gitlab,devops engineer,4,T
+gitlab,devops engineer,5,T
+gitops,devops engineer,3,T
+gitops,devops engineer,4,T
+gitops,devops engineer,5,T
+github,devops engineer,3,T
+github,devops engineer,4,T
+github,devops engineer,5,T
+teamcity,devops engineer,3,T
+teamcity,devops engineer,4,T
+teamcity,devops engineer,5,T
+deploy,devops engineer,3,T
+deploy,devops engineer,4,T
+deploy,devops engineer,5,T
+spinnaker,devops engineer,4,T
+spinnaker,devops engineer,5,T
+spinnaker,devops engineer,6,T
+lead devops,devops engineer,5,R
+senior devops,devops engineer,4,R
+experienced devops ,devops engineer,4,R
+devsecops engineer,devops engineer,4,R
+automation engineer ,devops engineer,3,R
+senior devops,devops engineer,5,R
+experienced devops ,devops engineer,5,R
+devsecops engineer,devops engineer,5,R
+automation engineer ,devops engineer,4,R
+automation engineer ,devops engineer,5,R
+migration of on-prem to cloud,devops engineer,3,T
+migration of on-prem to cloud,devops engineer,4,T
+migration of on-prem to cloud,devops engineer,5,T
+migration,devops engineer,3,T
+migration,devops engineer,4,T
+migration,devops engineer,5,T
+on-prem to cloud,devops engineer,3,T
+on-prem to cloud,devops engineer,4,T
+on-prem to cloud,devops engineer,5,T
+automation of pipelines,devops engineer,3,T
+automation of pipelines,devops engineer,4,T
+automation of pipelines,devops engineer,5,T
+pipeline automation,devops engineer,3,T
+pipeline automation,devops engineer,4,T
+pipeline automation,devops engineer,5,T
+building pipelines,devops engineer,3,T
+building pipelines,devops engineer,4,T
+building pipelines,devops engineer,5,T
+testing pipelines,devops engineer,3,T
+testing pipelines,devops engineer,4,T
+testing pipelines,devops engineer,5,T
+deploying pipelines,devops engineer,3,T
+deploying pipelines,devops engineer,4,T
+deploying pipelines,devops engineer,5,T
+continuous integration / continuous development ,devops engineer,3,T
+continuous integration / continuous development ,devops engineer,4,T
+continuous integration / continuous development ,devops engineer,5,T
+continuous integration / continuous delivery,devops engineer,3,T
+continuous integration / continuous delivery,devops engineer,4,T
+continuous integration / continuous delivery,devops engineer,5,T
+continuous integration,devops engineer,3,T
+continuous integration,devops engineer,4,T
+continuous integration,devops engineer,5,T
+continuous delivery,devops engineer,3,T
+continuous delivery,devops engineer,4,T
+continuous delivery,devops engineer,5,T
+continuous deployment,devops engineer,3,T
+continuous deployment,devops engineer,4,T
+continuous deployment,devops engineer,5,T
+provisioning infrastructure,devops engineer,3,R
+provisioning infrastructure,devops engineer,4,R
+provisioning infrastructure,devops engineer,5,R
+orchestration,devops engineer,3,T
+orchestration,devops engineer,4,T
+orchestration,devops engineer,5,T
+infrastructure as code,devops engineer,3,T
+infrastructure as code,devops engineer,4,T
+infrastructure as code,devops engineer,5,T
+iac,devops engineer,3,T
+iac,devops engineer,4,T
+iac,devops engineer,5,T
+monitoring platforms ,devops engineer,3,R
+monitoring platforms ,devops engineer,4,R
+monitoring platforms ,devops engineer,5,R
+logging platforms,devops engineer,3,T
+logging platforms,devops engineer,4,T
+logging platforms,devops engineer,5,T
+containerisation,devops engineer,3,T
+containerisation,devops engineer,4,T
+containerisation,devops engineer,5,T
+infrastructure deployment,devops engineer,3,T
+infrastructure deployment,devops engineer,4,T
+infrastructure deployment,devops engineer,5,T
+canary deployment,devops engineer,3,T
+canary deployment,devops engineer,4,T
+canary deployment,devops engineer,5,T
+blue green deployment,devops engineer,3,T
+blue green deployment,devops engineer,4,T
+blue green deployment,devops engineer,5,T
+logging,devops engineer,3,T
+logging,devops engineer,4,T
+logging,devops engineer,5,T
+monitoring,devops engineer,3,R
+monitoring,devops engineer,4,R
+monitoring,devops engineer,5,R
+docker,devops engineer,3,T
+docker,devops engineer,4,T
+docker,devops engineer,5,T
+container,devops engineer,3,T
+container,devops engineer,4,T
+container,devops engineer,5,T
+packer,devops engineer,3,T
+packer,devops engineer,4,T
+packer,devops engineer,5,T
+vault,devops engineer,3,T
+vault,devops engineer,4,T
+vault,devops engineer,5,T
+big data,data scientist,3,T
+big data,data scientist,4,T
+big data,data scientist,5,T
+bigdata,data scientist,3,T
+bigdata,data scientist,4,T
+bigdata,data scientist,5,T
+r programming,data scientist,3,T
+r programming,data scientist,4,T
+r programming,data scientist,5,T
+r studio,data scientist,3,T
+r studio,data scientist,4,T
+r studio,data scientist,5,T
+r-studio,data scientist,3,T
+r-studio,data scientist,4,T
+r-studio,data scientist,5,T
+rstudio,data scientist,3,T
+rstudio,data scientist,4,T
+rstudio,data scientist,5,T
+r,data scientist,3,T
+r,data scientist,4,T
+r,data scientist,5,T
+pyspark,data scientist,3,T
+pyspark,data scientist,4,T
+pyspark,data scientist,5,T
+pyspark.ml,data scientist,3,T
+pyspark.ml,data scientist,4,T
+pyspark.ml,data scientist,5,T
+mllib,data scientist,3,T
+mllib,data scientist,4,T
+mllib,data scientist,5,T
+python,data scientist,3,T
+python,data scientist,4,T
+pyhton,data scientist,5,T
+python keras,data scientist,3,T
+python keras,data scientist,4,T
+pyhton keras,data scientist,5,T
+keras,data scientist,3,T
+keras,data scientist,4,T
+keras,data scientist,5,T
+tensorflow,data scientist,3,T
+tensorflow,data scientist,4,T
+tensorflow,data scientist,5,T
+pytorch,data scientist,3,T
+pytorch,data scientist,4,T
+pytorch,data scientist,5,T
+pandas,data scientist,3,T
+pandas,data scientist,4,T
+pandas,data scientist,5,T
+dask,data scientist,3,T
+dask,data scientist,4,T
+dask,data scientist,5,T
+numpy,data scientist,3,T
+numpy,data scientist,4,T
+numpy,data scientist,5,T
+scipy,data scientist,3,T
+scipy,data scientist,4,T
+scipy,data scientist,5,T
+sci-py,data scientist,3,T
+sci-py,data scientist,4,T
+sci-py,data scientist,5,T
+matplotlib,data scientist,3,T
+matplotlib,data scientist,4,T
+matplotlib,data scientist,5,T
+seaborn,data scientist,3,T
+seaborn,data scientist,4,T
+seaborn,data scientist,5,T
+sklearn,data scientist,3,T
+sklearn,data scientist,4,T
+sklearn,data scientist,5,T
+airflow,data scientist,3,T
+airflow,data scientist,4,T
+airflow,data scientist,5,T
+kubeflow,data scientist,3,T
+kubeflow,data scientist,4,T
+kubeflow,data scientist,5,T
+mlflow,data scientist,3,T
+mlflow,data scientist,4,T
+mlflow,data scientist,5,T
+sagemaker,data scientist,3,T
+sagemaker,data scientist,4,T
+sagemaker,data scientist,5,T
+jupyter,data scientist,3,T
+jupyter,data scientist,4,T
+jupyter,data scientist,5,T
+data mining,data scientist,3,T
+data mining,data scientist,4,T
+data mining,data scientist,5,T
+data science,data scientist,3,R
+data science,data scientist,4,R
+data science,data scientist,5,R
+data science analytics,data scientist,3,R
+data science analytics,data scientist,4,R
+data science analytics,data scientist,5,R
+data analytics,data scientist,3,R
+data analytics,data scientist,4,R
+data analytics,data scientist,5,R
+chatbot,data scientist,4,T
+chatbot,data scientist,4,T
+chatbot,data scientist,5,T
+reinforcement learning,data scientist,3,T
+reinforcement learning,data scientist,4,T
+reinforcement learning,data scientist,5,T
+nlp,data scientist,3,T
+nlp,data scientist,4,T
+nlp,data scientist,5,T
+machine learning,data scientist,3,T
+machine learning,data scientist,4,T
+machine learning,data scientist,5,T
+ml,data scientist,3,T
+ml,data scientist,4,T
+ml,data scientist,5,T
+statistics,data scientist,3,T
+statistics,data scientist,4,T
+statistics,data scientist,5,T
+neural networks,data scientist,4,T
+neural networks,data scientist,4,T
+neural networks,data scientist,5,T
+lambda architecture,solution architect,5,T
+kappa architecture,solution architect,5,T
+team lead,solution architect,5,S
+lead a team,solution architect,5,S
+lead team,solution architect,5,S
+tech lead,solution architect,5,S
+team management,solution architect,6,R
+managed a team,solution architect,6,R
+team lead,solution architect,6,S
+lead a team,solution architect,6,S
+lead team,solution architect,6,S
+tech lead,solution architect,6,S
+togaf,solution architect,5,T
+archimate,solution architect,5,T
+domain driven design,solution architect,5,T
+ddd,solution architect,5,T
+soa,solution architect,5,T
+graphql,solution architect,5,T
+rest,solution architect,5,T
+soa,solution architect,5,T
+soap,solution architect,5,T
+grpc,solution architect,5,T
+togaf,solution architect,6,T
+archimate,solution architect,6,T
+domain driven design,solution architect,6,T
+ddd,solution architect,6,T
+soa,solution architect,6,T
+graphql,solution architect,6,T
+rest,solution architect,6,T
+soa,solution architect,6,T
+soap,solution architect,6,T
+grpc,solution architect,6,T
+data integration,solution architect,5,T
+api,solution architect,5,T
+api management,solution architect,5,T
+kong,solution architect,5,T
+apigee,solution architect,5,T
+mulesoft,solution architect,5,T
+kubernetes,solution architect,5,T
+eks,solution architect,5,T
+aks,solution architect,5,T
+gke,solution architect,5,T
+k8S,solution architect,5,T
+istio,solution architect,5,T
+linkerd,solution architect,5,T
+envoy,solution architect,5,T
+nginx,solution architect,5,T
+kong mesh,solution architect,5,T
+node/java,solution architect,5,T
+node,solution architect,5,T
+node.js,solution architect,5,T
+influx,solution architect,5,T
+influxdb,solution architect,5,T
+druid,solution architect,5,T
+datastax,solution architect,5,T
+cassandra,solution architect,5,T
+redis,solution architect,5,T
+memcache,solution architect,5,T
+redis enterprise,solution architect,5,T
+ci/cd,solution architect,5,T
+ci,solution architect,5,T
+cd,solution architect,5,T
+container,solution architect,5,T
+container,solution architect,6,T
+packer,solution architect,5,T
+packer,solution architect,6,T
+vault,solution architect,5,T
+vault,solution architect,6,T
+docker,solution architect,5,T
+docker,solution architect,6,T
+oracle,data architect,5,T
+postgres,data architect,5,T
+redshift,data architect,5,T
+sql server,data architect,5,T
+big query,data architect,5,T
+snowflake,data architect,5,T
+mysql,data architect,5,T
+data vault,data architect,5,T
+third normal form,data architect,5,T
+normalize,data architect,5,T
+denormalize,data architect,5,T
+normalization,data architect,5,T
+denormalization,data architect,5,T
+database normalization,data architect,5,T
+database denormalization,data architect,5,T
+3nf,data architect,5,T
+aws,data architect,5,R
+gcp,data architect,5,R
+azure,data architect,5,R
+graph,data architect,5,T
+neoj4,data architect,5,T
+tigergraph,data architect,5,T
+gremlin,data architect,5,T
+gremlin graphql,data architect,5,T
+ci/cd,data architect,5,T
+c++,solution engineer,3,T
+c,solution engineer,3,T
+c#,application engineer,3,T
+logging platforms,solution engineer,3,T
+logging platforms,solution engineer,4,T
+logging platforms,solution engineer,5,T
+logging,solution engineer,3,T
+logging,solution engineer,4,T
+logging,solution engineer,5,T
+sybase,solution engineer,3,T
+hbase,solution engineer,3,T
+ci/cd,solution engineer,3,T
+node,application engineer,3,T
+node.js,application engineer,3,T
+react,application engineer,3,T
+react.js,application engineer,3,T
+angular,application engineer,3,T
+angular.js,application engineer,3,T
+vue,application engineer,4,T
+vue.js,application engineer,4,T
+vue,application engineer,5,T
+vue.js,application engineer,5,T
+release,application engineer,3,T
+release,application engineer,4,T
+release,application engineer,5,T
+logging platforms,application engineer,3,T
+logging platforms,application engineer,4,T
+logging platforms,application engineer,5,T
+logging,application engineer,3,T
+logging,application engineer,4,T
+logging,application engineer,5,T
+release,solution engineer,3,T
+release,solution engineer,4,T
+release,solution engineer,5,T
+linux,solution engineer,2,T
+implementing software applications,solution engineer,3,R
+software applications,solution engineer,3,R
+c/c++,solution engineer,4,T
+c++,solution engineer,4,T
+c,solution engineer,4,T
+c#,application engineer,4,T
+sybase,solution engineer,4,T
+hbase,solution engineer,4,T
+ci/cd,solution engineer,4,T
+node,application engineer,4,T
+node.js,application engineer,4,T
+react,application engineer,4,T
+react.js,application engineer,4,T
+angular,application engineer,4,T
+angular.js,application engineer,4,T
+implementing software applications,solution engineer,4,R
+software applications,solution engineer,4,R
+c/c++,solution engineer,5,T
+c++,solution engineer,5,T
+c,solution engineer,5,T
+c#,solution engineer,5,T
+sybase,solution engineer,5,T
+hbase,solution engineer,5,T
+ci/cd,solution engineer,5,T
+docker,solution engineer,3,T
+docker,solution engineer,4,T
+docker,solution engineer,5,T
+container,solution engineer,3,T
+container,solution engineer,4,T
+container,solution engineer,5,T
+packer,solution engineer,3,T
+packer,solution engineer,4,T
+packer,solution engineer,5,T
+vault,solution engineer,3,T
+vault,solution engineer,4,T
+vault,devops engineer,5,T
+php,application engineer,3,T
+php,application engineer,4,T
+php,application engineer,5,T
+.net,application engineer,3,T
+.net,application engineer,4,T
+.net,application engineer,5,T
+asp,application engineer,3,T
+asp,application engineer,4,T
+asp,application engineer,5,T
+vb,application engineer,3,T
+vb,application engineer,4,T
+vb,application engineer,5,T
+node,application engineer,5,T
+node.js,application engineer,5,T
+react,application engineer,5,T
+react.js,application engineer,5,T
+angular,application engineer,5,T
+angular.js,application engineer,5,T
+implementing software,solution engineer,5,R
+implementing software applications,solution engineer,5,R
+software applications,application engineer,5,R
+software application,application engineer,5,R
+application,application engineer,5,R
+applications,application engineer,5,R
+webapp,application engineer,5,R
+webapps,application engineer,5,R
+docker,application engineer,3,T
+docker,application engineer,4,T
+docker,application engineer,5,T
+container,application engineer,3,T
+container,application engineer,4,T
+container,application engineer,5,T
+packer,application engineer,3,T
+packer,application engineer,4,T
+packer,application engineer,5,T
+vault,application engineer,3,T
+vault,application engineer,4,T
+vault,application engineer,5,T
+oracle,database administrator,5,T
+dba,database administrator,5,R
+database maintenance,database administrator,5,R
+databases maintenance,database administrator,5,R
+maintain database,database administrator,5,R
+maintain databases,database administrator,5,R
+performance tuning,database administrator,5,R
+oracle,data architect,6,T
+postgres,data architect,6,T
+redshift,data architect,6,T
+sql server,data architect,6,T
+big query,data architect,6,T
+snowflake,data architect,6,T
+mysql,data architect,6,T
+data vault,data architect,6,T
+third normal form,data architect,6,T
+3nf,data architect,6,T
+normalize,data architect,6,T
+denormalize,data architect,6,T
+normalization,data architect,6,T
+denormalization,data architect,6,T
+database normalization,data architect,6,T
+database denormalization,data architect,6,T
+3nf,data architect,6,T
+aws,data architect,6,R
+gcp,data architect,6,R
+azure,data architect,6,R
+graph,data architect,6,T
+neoj4,data architect,6,T
+tigergraph,data architect,6,T
+gremlin,data architect,6,T
+gremlin graphql,data architect,6,T
+ci/cd,data architect,6,T
+team management,solution architect,7,R
+managed a team,solution architect,7,R
+ci cd,data architect,6,T
+ci-cd,data architect,6,T
+cicd,data architect,6,T

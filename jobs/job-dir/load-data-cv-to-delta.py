@@ -12,11 +12,15 @@
 from datetime import datetime
 
 datepath=datetime.today().strftime('%Y-%m-%d')
-pdf_daily_path ="/var/lib/docker/volumes/sample/_data/"+"data/raw_pdf/dt="+datepath+"/" 
+print(datepath)
+pdf_daily_path ="/opt/spark/examples/"+"data/raw_pdf/dt="+datepath+"/" 
 #
-json_daily_path="/var/lib/docker/volumes/sample/_data/"+"data/raw_json/dt="+datepath+"/"
-delta_json_structure="/var/lib/docker/volumes/sample/_data/"+"data/delta/json-cv-pdf"
+json_daily_path="/opt/spark/examples/"+"data/raw_json/dt="+datepath+"/"
+delta_json_structure="/opt/spark/examples/"+"data/delta/json-cv-pdf"
 
+print(pdf_daily_path)
+print(json_daily_path)
+print(delta_json_structure)
 
 
 import numpy as np
@@ -38,6 +42,7 @@ from lib.local_sh.functions import copy_local_to_raw_sh
 #
 import os
 pdf_files=[val for sublist in [[os.path.join(i[0], j) for j in i[2]] for i in os.walk(pdf_daily_path)] for val in sublist]
+print(pdf_files)
 # Meta comment to ease selecting text
 #
 os.system('mkdir -p '+json_daily_path)
@@ -98,8 +103,8 @@ print("Data Load Done!")
 ##############################
 ###
 ### Input delta in folder :  /data 
-my_input_delta_table="/var/lib/docker/volumes/sample/_data/"+"data/delta/json-cv-pdf"
-delta_ngram_structure="/var/lib/docker/volumes/sample/_data/"+"data/delta/cv-files-ngrams"
+my_input_delta_table="/opt/spark/examples/"+"data/delta/json-cv-pdf"
+delta_ngram_structure="/opt/spark/examples/"+"data/delta/cv-files-ngrams"
 ###
 ######
 ##############################Execution##########################
@@ -188,13 +193,13 @@ print("Calculate top 10 most frequent 1,2,3,4,5,6 ngrams  - Finished!")
 #####
 ####################################################
 #
-skills_bulk_path="/var/lib/docker/volumes/sample/_data/"+"data/raw_role_skills/"
+skills_bulk_path="/opt/spark/examples/"+"data/raw_role_skills/*.csv"
 #
-delta_skills_structure="/var/lib/docker/volumes/sample/_data/"+"data/delta/role_skills"
+delta_skills_structure="/opt/spark/examples/"+"data/delta/role_skills"
 #
 ##############################Execution##########################
-import findspark
-findspark.init()
+#import findspark
+#findspark.init()
 #
 import pyspark
 from pyspark.sql import functions as pfunc
@@ -231,7 +236,7 @@ print("Skills Load Done!")
 #
 #####################################
 ####
-sc.stop()
+sqlContext.stop()
 #
 print("All Loading Jobs Done!")
 #######

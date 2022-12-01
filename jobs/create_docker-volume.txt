@@ -1,7 +1,0 @@
-#create temporary container to create docker volume
-CID=$(docker run -d -v <volume_name>:/<Volume_name> <docker_image_name> true)
-#Navigate to the directory you want to copy to the volume and run below command
-docker cp . $CID:/<volume_name/
-
-#delete temporary container
-docker rm $CID

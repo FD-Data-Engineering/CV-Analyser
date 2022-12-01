@@ -5,13 +5,13 @@
 ##############################
 ###
 ### Input delta in folder :  /data/delta
-json_cv_file="/home/pkwame/Git/spark-on-kubernetes/jobs/job-dir/"+"data/delta/json-cv-pdf"
+json_cv_file="/opt/spark/examples/"+"data/delta/json-cv-pdf"
 json_cv_table="pdf_cv"
 #
-ngrams_cv_file="/home/pkwame/Git/spark-on-kubernetes/jobs/job-dir/"+"data/delta/cv-files-ngrams"
+ngrams_cv_file="/opt/spark/examples/"+"data/delta/cv-files-ngrams"
 ngrams_cv_table="ngrams_cv"
 #
-skills_file="/home/pkwame/Git/spark-on-kubernetes/jobs/job-dir/"+"data/delta/role_skills"
+skills_file="/opt/spark/examples/"+"data/delta/role_skills"
 skills_table="role_skills"
 ###
 ######
@@ -23,6 +23,7 @@ skills_table="role_skills"
 import pyspark
 from pyspark.sql import functions as pfunc
 from pyspark.sql import SQLContext
+from pyspark.sql import SparkSession
 from pyspark.sql import Window, types
 import re
 import pandas as pd
@@ -37,8 +38,9 @@ from scipy import stats
 #
 import subprocess
 #
-sc = pyspark.SparkContext(appName="Daily_CV_Analysis-Delta")
-sqlContext = SQLContext(sc)
+#sc = pyspark.SparkContext(appName="Daily_CV_Analysis-Delta")
+#sqlContext = SQLContext(sc)
+sqlContext = SparkSession.builder.appName("Daily_CV_Analysis-Delta").config("spark.jars.packages", "io.delta:delta-core_2.12:1.2.1") .config("spark.jars.repositories", "https://maven-central.storage-download.googleapis.com/maven2/").getOrCreate()
 #
 
 #
@@ -108,7 +110,7 @@ data_analytics_df4.printSchema()
 data_analytics_df4.show(5)
 #
 #
-sc.stop()
+sqlContext.stop()
 #
 ##
 #

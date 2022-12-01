@@ -30,11 +30,23 @@ spec:
 #
 #
 # missing Volume
-  
+ 
+  volumes:
+#    - name: pv-storage
+#      persistentVolumeClaim:
+#        claimName: pv-claim
+    - name: local-job     
+      hostPath:
+        path: /var/lib/docker/volumes/loadCV/_data # $PWD/jobs/job-dir
+    - name: spark-application-file
+      hostPath:
+        path: /var/lib/docker/volumes/loadCV/_data/load-data-cv-to-delta.py # $PWD/jobs/job-dir
+        type: File
+    
+    
 #
 #
-  mainApplicationFile: local:///home/smestry/CV-Analyzer/job-dir/load-data-cv-to-delta.py
-  #mainClass: "org.apache.spark.examples.SparkPi"
+  mainApplicationFile: local:///opt/spark/examples/load-data-cv-to-delta.py
 #
   
 #
@@ -45,32 +57,31 @@ spec:
     onFailureRetryInterval: 10
     onSubmissionFailureRetries: 5
     onSubmissionFailureRetryInterval: 20
-  volumes:
-    - name: "test-volume"
-      hostPath:
-        path: "/home/smestry"
-        type: DirectoryOrCreate
   driver:
     cores: 1
     coreLimit: "1200m"
     memory: "512m"
-    volumeMounts:
-      - name: "test-volume"
-        mountPath: "/home/smestry/CV-Analyzer/job-dir/"
     labels:
       version: 2.4.5
     serviceAccount: spark
+#
+    volumeMounts:
+      - name: local-job
+        mountPath: //opt/spark/examples
+        readOnly: false
+      
 #
   executor:
     cores: 1
     instances: 1
     memory: "512m"
-    volumeMounts:
-      - name: "test-volume"
-        mountPath: "/home/smestry/CV-Analyzer/job-dir/"
     labels:
       version: 2.4.5
-#      
 #
-
+    volumeMounts:
+      - name: local-job
+        mountPath: //opt/spark/examples
+        readOnly: false
+      
+#
 #
