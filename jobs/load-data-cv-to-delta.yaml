@@ -27,35 +27,29 @@ spec:
   mode: cluster
   image: "docker.io/jpacerqueira83/pyspark-k8s:2.4.5"
   imagePullPolicy: Always
-  #
-  #
-  # missing Volume
-  volumeMounts:
-    - mountPath: //job-dir
-      name: local-job
-    - mountPath: //job-dir/load-data-cv-to-delta.py
-      name: spark-application-file
+#
+#
+# missing Volume
+ 
   volumes:
 #    - name: pv-storage
 #      persistentVolumeClaim:
 #        claimName: pv-claim
     - name: local-job     
       hostPath:
-        path: /run/desktop/mnt/host/c/cv-analyser/CV-Analyser/jobs/job-dir # $PWD/jobs/job-dir
-        type: DirectoryOrCreate
+        path: /var/lib/docker/volumes/loadCV/_data # $PWD/jobs/job-dir
     - name: spark-application-file
       hostPath:
-        path: /run/desktop/mnt/host/c/cv-analyser/CV-Analyser/jobs/job-dir/load-data-cv-to-delta.py # $PWD/load-data-cv-to-delta.py
-        type: FileOrCreate
-  #
-  #
-  mainApplicationFile: local:///job-dir/load-data-cv-to-delta.py
-  #
-  arguments:
-    - " "
-  packages:
-    - "io.delta:delta-core_2.11:0.6.1"
-  #
+        path: /var/lib/docker/volumes/loadCV/_data/load-data-cv-to-delta.py # $PWD/jobs/job-dir
+        type: File
+    
+    
+#
+#
+  mainApplicationFile: local:///opt/spark/examples/load-data-cv-to-delta.py
+#
+  
+#
   sparkVersion: "2.4.5"
   restartPolicy:
     type: OnFailure
@@ -70,24 +64,24 @@ spec:
     labels:
       version: 2.4.5
     serviceAccount: spark
-    #
+#
     volumeMounts:
       - name: local-job
-        mountPath: //job-dir
-      - name: spark-application-file
-        mountPath: //job-dir/load-data-cv-to-delta.py
-  #
+        mountPath: //opt/spark/examples
+        readOnly: false
+      
+#
   executor:
     cores: 1
     instances: 1
     memory: "512m"
     labels:
       version: 2.4.5
-    #
+#
     volumeMounts:
       - name: local-job
-        mountPath: //job-dir
-      - name: spark-application-file
-        mountPath: //job-dir/load-data-cv-to-delta.py
+        mountPath: //opt/spark/examples
+        readOnly: false
+      
 #
 #

@@ -5,13 +5,13 @@
 ##############################
 ###
 ### Input delta in folder :  /data/delta
-json_cv_file="/c/cv-analyser/CV-Analyser/jobs/job-dir/"+"data/delta/json-cv-pdf"
+json_cv_file="/opt/spark/examples/"+"data/delta/json-cv-pdf"
 json_cv_table="pdf_cv"
 #
-ngrams_cv_file="/c/cv-analyser/CV-Analyser/jobs/job-dir/"+"data/delta/cv-files-ngrams"
+ngrams_cv_file="/opt/spark/examples/"+"data/delta/cv-files-ngrams"
 ngrams_cv_table="ngrams_cv"
 #
-skills_file="/c/cv-analyser/CV-Analyser/jobs/job-dir/"+"data/delta/role_skills"
+skills_file="/opt/spark/examples/"+"data/delta/role_skills"
 skills_table="role_skills"
 ###
 ######

@@ -29,23 +29,17 @@ spec:
   imagePullPolicy: Always
 #
 # missing Volume
-  volumeMounts:
-    - mountPath: //job-dir
-      name: local-jobs
-    - mountPath: //job-dir/dataminer-categorized-delta-analytics.py
-      name: spark-application-file
   volumes:
 #    - name: pv-storage
 #      persistentVolumeClaim:
 #        claimName: pv-claim
     - name: local-job     
       hostPath:
-        path: /c/cv-analyser/CV-Analyser/jobs/job-dir # $PWD/jobs/job-dir
-        type: DirectoryOrCreate
+        path: /var/lib/docker/volumes/loadCV/_data # $PWD/jobs/job-dir
     - name: spark-application-file
       hostPath:
-        path: /c/cv-analyser/CV-Analyser/jobs/job-dir/dataminer-categorized-delta-analytics.py  # $PWD/jobs/job-dir/dataminer-categorized-delta-analytics.py
-        type: FileOrCreate
+        path: /var/lib/docker/volumes/loadCV/_data/dataminer-categorized-delta-analytics.py # $PWD/jobs/job-dir
+        type: File
 #
 #
   mainApplicationFile: local:///opt/spark/examples/dataminer-categorized-delta-analytics.py
@@ -68,10 +62,9 @@ spec:
     serviceAccount: spark
 #
     volumeMounts:
-      - name: local-jobs
-        mountPath: //job-dir
-      - name: spark-application-file
-        mountPath: //job-dir/dataminer-categorized-delta-analytics.py
+      - name: local-job
+        mountPath: //opt/spark/examples
+        readOnly: false
 #
   executor:
     cores: 1
@@ -81,9 +74,8 @@ spec:
       version: 2.4.5
 #
     volumeMounts:
-      - name: local-jobs
-        mountPath: //job-dir
-      - name: spark-application-file
-        mountPath: //job-dir/dataminer-categorized-delta-analytics.py
+      - name: local-job
+        mountPath: //opt/spark/examples
+        readOnly: false
 #
 #

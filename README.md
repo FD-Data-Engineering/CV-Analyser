@@ -75,13 +75,13 @@ After, you can run ``` dataminer-categorized-delta-analytics.yaml ``` job, to an
 ## Run CV Analyser Spark Jobs
 Create a Docker volume to mount on container 
 1. Command to create a temporary container to create the docker volume named loadCV
-CID=$(docker run -d -v loadCV:/loadCV:rw docker.io/jpacerqueira83/pyspark-k8s:2.4.5 true)
+`` CID=$(docker run -d -v loadCV:/loadCV:rw docker.io/jpacerqueira83/pyspark-k8s:2.4.5 true) ``
 
 2. Navigate to job-dir
 3. use below command to copy the contents of the CV-Analyzer/jobs/job-dir to the Docker volume loadCV
-docker cp . $CID:/loadCV/
+`` docker cp . $CID:/loadCV/ ``
 4. Delete the temporary container
-docker rm $CID
+`` docker rm $CID ``
 
 
 Run the ``load-data-cv-to-delta`` job by executing ``` kubectl apply -f ./jobs/load-data-cv-to-delta.yaml ```. This will load the CV as described above. The output of this command will create a directory with curent ``` DATE ``` in ```/jobs/job-dir/data/raw_json/dt=yyyy-mm-dd/extract-yyyy-mm-dd.json```.
