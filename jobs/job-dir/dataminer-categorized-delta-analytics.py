@@ -5,14 +5,16 @@
 ##############################
 ###
 ### Input delta in folder :  /data/delta
-json_cv_file="/opt/spark/examples/"+"data/delta/json-cv-pdf"
+json_cv_file="/opt/spark/examples/data/delta/json-cv-pdf"
 json_cv_table="pdf_cv"
 #
-ngrams_cv_file="/opt/spark/examples/"+"data/delta/cv-files-ngrams"
+ngrams_cv_file="/opt/spark/examples/data/delta/cv-files-ngrams"
 ngrams_cv_table="ngrams_cv"
 #
-skills_file="/opt/spark/examples/"+"data/delta/role_skills"
+skills_file="/opt/spark/examples/data/delta/role_skills"
 skills_table="role_skills"
+
+skills_matrix="/opt/spark/examples/data/Skills_matrix"
 ###
 ######
 ##############################Execution##########################
@@ -35,8 +37,10 @@ from pyspark.sql.functions import udf
 from pyspark.sql.functions import *
 from scipy.stats import kstest
 from scipy import stats
+from datetime import datetime
 #
 import subprocess
+import os
 #
 #sc = pyspark.SparkContext(appName="Daily_CV_Analysis-Delta")
 #sqlContext = SQLContext(sc)
@@ -110,6 +114,42 @@ data_analytics_df4.printSchema()
 data_analytics_df4.show(5)
 #
 #
+
+
+
+engineer_matrix_skills=sqlContext.sql(" select a.filename,b.role,b.skill,b.level,b.skill_type from ngrams_cv as a, role_skills as b  where  b.level in ('2','3','4','5','6','7') and \
+ ( array_contains(a.1_grams,b.skill) or array_contains(a.2_grams,b.skill) or array_contains(a.3_grams,b.skill) or array_contains(a.4_grams,b.skill) or array_contains(a.5_grams,b.skill) ) \
+ and b.skill IS NOT NULL and b.role IS NOT NULL  ")
+#
+engineer_matrix_skills.printSchema()
+engineer_matrix_skills.head(2)
+#
+datepath=datetime.today().strftime('%Y_%m_%d')
+
+skills_matrix_output=skills_matrix+"/skill_matrix_"+datepath
+os.system('mkdir -p '+skills_matrix_output)
+skills_matrix_file_path= "skills_matrix_file_" + datepath  + ".csv"
+#
+# cast columns as strings
+#engineer_matrix_skills_wrt = engineer_matrix_skills.withColumn('filename', col('filename').cast('string')).withColumn('role', col('role').cast('string')).withColumn('skill', col('skill').cast('string'))
+#engineer_matrix_skills_wrt.printschema()
+#
+tmp_skills_matrix_file_path= skills_matrix+"/tmp_" + skills_matrix_file_path
+engineer_matrix_skills.write.mode("overwrite").option("mergeSchema", "true").option("header", "true").format("csv").save(tmp_skills_matrix_file_path)
+#
+
+print(skills_matrix)
+#
+cmd_convert_file = "cat " + tmp_skills_matrix_file_path + "/part-*.csv > " +skills_matrix_output +"/"+ skills_matrix_file_path
+print(cmd_convert_file)
+os.system(cmd_convert_file)
+#
+#
+# import com.github.mrpowers.spark.daria.sql.DariaWriters
+# DariaWriters.writeSingleFile( df = engineer_matrix_skills , format = "csv", sc = sc, tmpFolder = "skils_matrix_tmp/", filename = skills_matrix_file)
+#
+print(" ------ Matrix Skills File Generated for Engineer ----- ")
+
 sqlContext.stop()
 #
 ##
