@@ -79,12 +79,11 @@ CID=$(docker run -d -v loadCV:/loadCV:rw docker.io/jpacerqueira83/pyspark-k8s:2.
 
 2. Navigate to job-dir
 3. use below command to copy the contents of the CV-Analyzer/jobs/job-dir to the Docker volume loadCV
-docker cp . $CID:/loadCV/
+`` docker cp . $CID:/loadCV/ ``
 4. Delete the temporary container
-docker rm $CID
+`` docker rm $CID ``
 
+Run the ``load-data-cv-to-delta`` job by executing ``` kubectl apply -f ./jobs/load-data-cv-to-delta.yaml ```. 
+This will load the CV as described above. The output of this command will create a directory with curent DATE in ``/jobs/job-dir/data/raw_json/dt=yyyy-mm-dd/ extract-yyyy-mm-dd.json `` along with relevant delta folders (cv-files-ngrams, json-cv-pdf, role_skills) with ``.parquet.crc`` files in ``/jobs/job-dir/data/``.
 
-Run the ``load-data-cv-to-delta`` job by executing ``` kubectl apply -f ./jobs/load-data-cv-to-delta.yaml ```. This will load the CV as described above. The output of this command will create a directory with curent ``` DATE ``` in ```/jobs/job-dir/data/raw_json/dt=yyyy-mm-dd/extract-yyyy-mm-dd.json```.
-
-Upon a successful run of the above, proceed to executing ``` kubectl apply -f ./jobs/dataminer-categorized-delta-analytics.yaml ```. This commad will analyse and categorise the ``.json`` file and create a ``.parquet.crc`` file, which can be found in ``/jobs/job-dir/data/delta/json-cv-pdf `` and ``/jobs/job-dir/data/delta/cv-files-ngrams ``. 
-
+Upon a successful run of the above, proceed to executing `` kubectl apply -f ./jobs/dataminer-categorized-delta-analytics.yaml``. This will help to visualise and categorise the delta.
