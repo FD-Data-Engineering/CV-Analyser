@@ -86,4 +86,4 @@ Create a Docker volume to mount on container
 Run the ``load-data-cv-to-delta`` job by executing ``` kubectl apply -f ./jobs/load-data-cv-to-delta.yaml ```. 
 This will load the CV as described above. The output of this command will create a directory with curent DATE in ``/jobs/job-dir/data/raw_json/dt=yyyy-mm-dd/ extract-yyyy-mm-dd.json `` along with relevant delta folders (cv-files-ngrams, json-cv-pdf, role_skills) with ``.parquet.crc`` files in ``/jobs/job-dir/data/``.
 
-Upon a successful run of the above, proceed to executing `` kubectl apply -f ./jobs/dataminer-categorized-delta-analytics.yaml``. This will help to visualise and categorise the delta.
+Upon a successful run of the above, proceed to executing `` kubectl apply -f ./jobs/dataminer-categorized-delta-analytics.yaml``, This will help to visualise and categorise the delta.
